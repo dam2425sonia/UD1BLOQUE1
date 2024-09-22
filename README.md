@@ -8,3 +8,5 @@
 6. Elimina el fichero llamado ejercicio1
 7. Muestra todos los ficheros del directorio “dam-accesodatos”
 8. Elimina nuevamente el fichero llamado ejercicio1.
+9. Borrar directorio sin archivos en su interior
+10. Borrar directorio con archivos en su interior (crear función recursiva borrarDirectorio)
