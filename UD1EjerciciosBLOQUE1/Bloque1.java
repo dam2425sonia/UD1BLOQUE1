@@ -103,7 +103,7 @@ public class Bloque1 {
 	
 	public static void borrarDirectorio(File directorio) {
 		File[] ficheros = directorio.listFiles();
-		// Elimina los ficheros contenidos dentro del directorio y el directorio
+		// Elimina los ficheros contenidos dentro del directorio de forma recursiva
 		if (ficheros != null) { 
 			for (File fichero : ficheros) {
 				if (fichero.isDirectory()) {
