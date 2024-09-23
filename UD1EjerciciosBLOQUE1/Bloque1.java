@@ -7,19 +7,19 @@ public class Bloque1 {
 	public static void main(String[] args) {
 
 		// 1. Crea un directorio llamado "dam-accesodatos"
-		File directorio = new File("src/dam-accesoDatosPruebaEjercicio");
+		File directorio = new File("dam-accesoDatosPruebaEjercicio");
 
 		if (directorio.mkdir()) {
-			System.out.println("1. Directorio 'acesso a datos' creado correctamente");
+			System.out.println("1. Directorio llamado 'dam-accesodatos' creado correctamente");
 		} else {
-			System.out.println("1. No se pudo crear directorio o ya existe");
+			System.out.println("1. No se pudo crear el directorio 'dam-accesodatos' o ya existe");
 		}
 
 		// 2. Crea un fichero llamado "ejercicio1" dentro del directorio "dam-accesodatos"
 		File f1 = new File(directorio, "ejercicio1.txt");
 		try {
 			if (f1.createNewFile()) {
-				System.out.println("2. Fichero 'ejercicio1' creado correctamente.");
+				System.out.println("2. Fichero llamado 'ejercicio1' creado correctamente.");
 			} else {
 				System.out.println("2. No se pudo crear el fichero 'ejercicio1' o ya existe");
 			}
@@ -29,7 +29,7 @@ public class Bloque1 {
 
 		// 3. Muestra por pantalla la longitud del fichero con nombre "ejercicio1"
 		if (f1.exists()) {
-			System.out.println("3. Longitud del fichero 'ejercicio1' es: " + f1.length() + " bytes.");
+			System.out.println("3. Longitud del fichero 'ejercicio1' es de : " + f1.length() + " bytes");
 		} else {
 			System.out.println("3. El fichero 'ejercicio1' no existe");
 		}
@@ -38,7 +38,7 @@ public class Bloque1 {
 		File f2 = new File(directorio, "ejercicio2.txt");
 		try {
 			if (f2.createNewFile()) {
-				System.out.println("4. Fichero 'ejercicio2' creado correctamente");
+				System.out.println("4. Fichero llamado 'ejercicio2' creado correctamente");
 			} else {
 				System.out.println("4. No se pudo crear el fichero 'ejercicio2' o ya existe");
 			}
@@ -51,7 +51,7 @@ public class Bloque1 {
 		System.out.println("5. Ficheros existente en el directorio 'dam-accesodatos:'");
 		if (ficheros != null && ficheros.length > 0) {	
 			for (String fichero : ficheros) {
-				System.out.println("->" + fichero);
+				System.out.println("**** " + fichero);
 			}
 		} else {
 			System.out.println("5. No hay ficheros que mostrar. El directorio 'dam-accesodatos' está vacío o no existe.");
@@ -69,7 +69,7 @@ public class Bloque1 {
 		System.out.println("7. Ficheros existente en el directorio 'dam-accesodatos'");		
 		if (ficheros != null && ficheros.length > 0) {
 			for (String fichero : ficheros) {
-				System.out.println("-> " + fichero);
+				System.out.println("**** " + fichero);
 			}
 		} else {
 			System.out.println("7. No hay ficheros que mostrar. El directorio 'dam-accesodatos' esta vacio o no existe");
@@ -102,8 +102,8 @@ public class Bloque1 {
 	}
 	
 	public static void borrarDirectorio(File directorio) {
-		File[] ficheros = directorio.listFiles();
 		// Elimina los ficheros contenidos dentro del directorio de forma recursiva
+		File[] ficheros = directorio.listFiles();
 		if (ficheros != null) { 
 			for (File fichero : ficheros) {
 				if (fichero.isDirectory()) {
